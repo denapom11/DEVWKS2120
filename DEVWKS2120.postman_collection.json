@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "e1c2931a-ab48-46fe-8706-c96e8de01bc4",
+		"name": "DEVWKS2120",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "{{baseUrl}}/organizations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/organizations",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"organizations"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/organizations/{{organizationId}}/networks",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f4cdfb81-c85b-47e6-a1a2-4ebd09d7b73a",
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"Del-Network\", jsonData.id);",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"name\": \"CLANZ\",\n    \"timeZone\": \"Australia/Melbourne\",\n    \"tags\": \"CLANZ\",\n    \"type\": \"wireless switch appliance\"\n  }"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/organizations/{{organizationId}}/networks",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"organizations",
+						"{{organizationId}}",
+						"networks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/networks/{{networkId}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/networks/{{networkId}}",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"networks",
+						"{{networkId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/networks/{{networkId}}/devices/claim",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"serial\":\"Q2QN-UTMQ-ZJQA\"}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/networks/{{networkId}}/devices/claim",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"networks",
+						"{{networkId}}",
+						"devices",
+						"claim"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/networks/{{networkId}}/devices/claim",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"serial\":\"Q2KD-ZHUD-MXM9\"}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/networks/{{networkId}}/devices/claim",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"networks",
+						"{{networkId}}",
+						"devices",
+						"claim"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/networks/{{networkId}}/devices/claim",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"serial\":\"Q2HP-W3HC-2C8D\"}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/networks/{{networkId}}/devices/claim",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"networks",
+						"{{networkId}}",
+						"devices",
+						"claim"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/networks/{{networkId}}/devices/claim",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"serial\":\"Q2GV-Y4MD-VSQ6\"}"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/networks/{{networkId}}/devices/claim",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"networks",
+						"{{networkId}}",
+						"devices",
+						"claim"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/networks/{{networkId}}/devices",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/networks/{{networkId}}/devices",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"networks",
+						"{{networkId}}",
+						"devices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/networks/{{networkId}}/ssids/0",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"number\": 0,\n        \"name\": \"CLANZ WiFi\",\n        \"enabled\": true,\n        \"splashPage\": \"None\",\n        \"ssidAdminAccessible\": false,\n        \"encryptionMode\" : \"wpa\",\n        \"wpaEncryptionMode\" : \"WPA2 only\",\n        \"authMode\": \"psk\",\n        \"psk\" : \"clanzwifi\",\n        \"ipAssignmentMode\": \"Bridge mode\",\n        \"minBitrate\": 11,\n        \"bandSelection\": \"5 GHz band only\",\n        \"perClientBandwidthLimitUp\": 0,\n        \"perClientBandwidthLimitDown\": 0\n    }"
+				},
+				"url": {
+					"raw": "{{baseUrl}}/networks/{{networkId}}/ssids/0",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"networks",
+						"{{networkId}}",
+						"ssids",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "{{baseUrl}}/networks/{{networkId}}/ssids",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{baseUrl}}/networks/{{networkId}}/ssids",
+					"host": [
+						"{{baseUrl}}"
+					],
+					"path": [
+						"networks",
+						"{{networkId}}",
+						"ssids"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://dashboard.meraki.com/api/v0/networks/{{Del-Network}}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-Cisco-Meraki-API-Key",
+						"value": "{{X-Cisco-Meraki-API-Key}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://dashboard.meraki.com/api/v0/networks/{{Del-Network}}",
+					"protocol": "https",
+					"host": [
+						"dashboard",
+						"meraki",
+						"com"
+					],
+					"path": [
+						"api",
+						"v0",
+						"networks",
+						"{{Del-Network}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
